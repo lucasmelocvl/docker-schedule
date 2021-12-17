@@ -8,7 +8,7 @@ docker build -t dletra/schedule:nginx nginx/ -f nginx/Dockerfile
 
 docker build -t dletra/schedule:db db/ -f db/Dockerfile
 
-# Para executar o docker Laravel
+# Para executar as dockers
 docker run -d --network dletra_net-schedule -v $(pwd)/laravel/src:/var/www/dletra-schedule --name dletra-schedule-src dletra/schedule:src
 
 docker run -d --network dletra_net-schedule --name dletra-schedule-nginx -p 8081:80 dletra/schedule:nginx
