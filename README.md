@@ -1,7 +1,7 @@
 # Criar a rede para agendamento
 docker network create dletra-net-schedule
 
-# Para compilar o Dockerfile, acessar cada pasta e executar
+# Para compilar o Dockerfile, executar
 docker build -t dletra/schedule:src laravel/ -f laravel/Dockerfile
 docker build -t dletra/schedule:nginx nginx/ -f nginx/Dockerfile
 docker build -t dletra/schedule:db db/ -f db/Dockerfile
